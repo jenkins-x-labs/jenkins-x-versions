@@ -129,3 +129,15 @@ secrets:
             <activeProfile>nexus</activeProfile>
         </activeProfiles>
     </settings>
+  dockerConfig: |-
+    {
+{{- if eq .Values.jxRequirements.cluster.provider "eks"}}
+{{- if .Values.jxRequirements.cluster.registry }}
+        "credHelpers": {
+          "{{ .Values.jxRequirements.cluster.registry }}": "ecr-login"
+        }
+{{- else }}
+        "credsStore": "ecr-login"
+{{- end }}
+{{- end }}
+    }
