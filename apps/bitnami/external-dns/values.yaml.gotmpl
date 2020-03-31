@@ -21,8 +21,13 @@ rbac:
   serviceAccountAnnotations:
     iam.gke.io/gcp-service-account: {{ .Values.jxRequirements.cluster.clusterName }}-ex@{{ .Values.jxRequirements.cluster.project }}.iam.gserviceaccount.com
 {{- else if eq .Values.jxRequirements.cluster.provider "eks" }}
+{{- if and (hasKey .Values.jxRequirements.cluster "aws") (.Values.jxRequirements.cluster.aws.helmSa) }}
   serviceAccountAnnotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Values.jxRequirements.cluster.namespace }}-external-dns
+    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.aws.accountId }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Release.Namespace }}-external-dns
+{{- else }}
+  serviceAccountCreate: false
+{{- end }}
+
 {{- end }}
 
 domainFilters:

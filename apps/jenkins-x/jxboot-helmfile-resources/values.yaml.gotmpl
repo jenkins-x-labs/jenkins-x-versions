@@ -6,6 +6,15 @@ controllerbuild:
 {{- end }}
 
 {{- if eq .Values.jxRequirements.cluster.provider "eks" }}
+controllerbuild:
+  serviceaccount:
+{{- if and (hasKey .Values.jxRequirements.cluster "aws") (.Values.jxRequirements.cluster.aws.helmSa) }}
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.aws.accountId }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Release.Namespace }}-jxboot-helmfile-resources-controllerbuild
+{{- else }}
+    enabled: false
+{{- end }}
+
 podTemplates:
   agent:
     dockerConfig: true

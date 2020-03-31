@@ -7,8 +7,13 @@ securityContext:
   enabled: true
   fsGroup: 1001
 serviceAccount:
+{{- if and (hasKey .Values.jxRequirements.cluster "aws") (.Values.jxRequirements.cluster.aws.helmSa) }}
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-cert-manager-cert-manager
+    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.aws.accountId }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Release.Namespace }}-cert-manager
+{{- else }}
+  create: false
+{{- end }}
+
 {{- end }}
 
 webhook:
