@@ -1,26 +1,5 @@
 Description: 'Template to generate the necessary IAM Policies for Jenkins-X EKS support '
 Resources:
-  CFNJenkinsXPolicies:
-    Type: AWS::IAM::ManagedPolicy
-    Properties:
-      ManagedPolicyName: !Join [ "-", [ CFNTektonBotPolicy, Ref: PoliciesSuffixParameter] ]
-      PolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-        - Effect: Allow
-          Action:
-          - cloudformation:ListStacks
-          - cloudformation:DescribeStacks
-          - cloudformation:CreateStack
-          - cloudformation:DeleteStack
-          - eks:*
-          - s3:*
-          - iam:DetachRolePolicy
-          - iam:GetPolicy
-          - iam:CreatePolicy
-          - iam:DeleteRole
-          - iam:GetOpenIDConnectProvider
-          Resource: "*"
   CFNExternalDNSPolicies:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -61,12 +40,6 @@ Parameters:
     Type: String
     Description: A suffix so we can create different policies on each execution
 Outputs:
-  CFNTektonBotPolicy:
-    Value:
-      Ref: CFNJenkinsXPolicies
-    Description: The ARN of the created policy
-    Export:
-      Name: !Join [ "-", [ TektonBotPolicy, Ref: PoliciesSuffixParameter] ]
   CFNExternalDNSPolicy:
     Value:
       Ref: CFNExternalDNSPolicies
