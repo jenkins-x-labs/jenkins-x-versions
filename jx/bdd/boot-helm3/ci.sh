@@ -35,6 +35,9 @@ export ZONE=europe-west1-c
 export LABELS="branch=${BRANCH_NAME,,},cluster=bdd-boot-helm3,create-time=${CREATED_TIME,,}"
 
 
+echo "running gcloud diagnostics"
+gcloud info --run-diagnostics  --project $PROJECT_ID
+
 echo "listing k8s clusters in project: $PROJECT_ID"
 
 gcloud beta container clusters list --project $PROJECT_ID
