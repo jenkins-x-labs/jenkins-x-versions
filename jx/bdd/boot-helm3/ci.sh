@@ -34,6 +34,11 @@ export CLUSTER_NAME="${BRANCH_NAME,,}-$BUILD_NUMBER-bdd-boot-helm3"
 export ZONE=europe-west1-c
 export LABELS="branch=${BRANCH_NAME,,},cluster=bdd-boot-helm3,create-time=${CREATED_TIME,,}"
 
+
+echo "listing k8s clusters in project: $PROJECT_ID"
+
+gcloud beta container clusters list --project $PROJECT_ID
+
 echo "creating cluster $CLUSTER_NAME with labels $LABELS"
 
 git clone https://github.com/jenkins-x-labs/cloud-resources.git
