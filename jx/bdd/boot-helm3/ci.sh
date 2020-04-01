@@ -37,7 +37,7 @@ export LABELS="branch=${BRANCH_NAME,,},cluster=bdd-boot-helm3,create-time=${CREA
 
 echo "listing k8s clusters in project: $PROJECT_ID"
 
-gcloud container clusters list --project $PROJECT_ID
+gcloud beta container clusters list --project $PROJECT_ID
 
 echo "creating cluster $CLUSTER_NAME with labels $LABELS"
 
