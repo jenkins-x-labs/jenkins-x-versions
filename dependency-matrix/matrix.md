@@ -72,3 +72,4 @@ Dependency | Sources | Version | Mismatched versions
 [jenkins-x/charts](https://github.com/jenkins-x/charts) |  | [2.10.0]() | 
 [jenkins-x-charts/nexus](https://github.com/jenkins-x-charts/nexus) |  | [0.1.25]() | 
 [jenkins-x-labs/flagger-metrics](https://github.com/jenkins-x-labs/flagger-metrics) |  | [0.0.8]() | 
+[Comcast/kuberhealthy](https://github.com/Comcast/kuberhealthy) |  | [1.2.6]() | 
