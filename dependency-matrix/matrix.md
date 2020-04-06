@@ -65,7 +65,7 @@ Dependency | Sources | Version | Mismatched versions
 [solo-io/gloo](https://github.com/solo-io/gloo) |  | [1.3.17](https://github.com/solo-io/gloo/releases/tag/v1.3.17) | 
 [jenkins-x-charts/jxboot-helmfile-resources](https://github.com/jenkins-x-charts/jxboot-helmfile-resources) |  | [0.0.128]() | 
 [kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns) |  | [2.20.10]() | 
-[jenkins-x-labs/jxl](https://github.com/jenkins-x-labs/jxl) |  | [0.0.167](https://github.com/jenkins-x-labs/jxl/releases/tag/v0.0.167) | 
+[jenkins-x-labs/jxl](https://github.com/jenkins-x-labs/jxl) |  | [0.0.171](https://github.com/jenkins-x-labs/jxl/releases/tag/v0.0.171) | 
 [jenkins-x-labs/istio](https://github.com/jenkins-x-labs/istio) |  | [0.0.21]() | 
 [godaddy/kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) |  | [3.2.0]() | 
 [jenkins-x-charts/acme](https://github.com/jenkins-x-charts/acme) |  | [0.1.1]() | 
