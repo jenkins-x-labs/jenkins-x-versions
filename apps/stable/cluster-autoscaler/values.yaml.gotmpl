@@ -6,8 +6,9 @@ autoDiscovery:
   - k8s.io/cluster-autoscaler/{{ .Values.jxRequirements.cluster.clusterName }}
 awsRegion: {{ .Values.jxRequirements.cluster.region }}
 image:
-  # will need to change this to 1.15.6 for EKS 1.15
-  tag: v1.14.7
+  # for EKS 1.15
+  repository: us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler
+  tag: v1.15.6
 {{- end }}
 
 rbac:
