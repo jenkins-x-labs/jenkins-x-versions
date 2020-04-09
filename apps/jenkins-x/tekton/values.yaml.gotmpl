@@ -15,8 +15,13 @@ auth:
 
 {{- if eq .Values.jxRequirements.cluster.provider "eks" }}
 serviceaccount:
+{{- if and (hasKey .Values.jxRequirements.cluster "aws") (.Values.jxRequirements.cluster.aws.helmSa) }}
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.project }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Values.jxRequirements.cluster.namespace }}-tekton-bot
+    eks.amazonaws.com/role-arn: arn:aws:iam::{{ .Values.jxRequirements.cluster.aws.accountId }}:role/{{ .Values.jxRequirements.cluster.clusterName }}-{{ .Release.Namespace }}-tekton-bot
+{{- else }}
+  enabled: false
+{{- end }}
+
 {{- else if eq .Values.jxRequirements.cluster.provider "gke" }}
 serviceaccount:
   annotations:
