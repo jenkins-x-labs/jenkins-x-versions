@@ -8,17 +8,16 @@ metadata:
 iam:
   withOIDC: true
   serviceAccounts:
-{{- if .IAM.TektonBotPolicy }}
   - metadata:
       name: tekton-bot
       namespace: jx
       labels: {aws-usage: "jenkins-x"}
     attachPolicyARNs:
-    - {{.IAM.TektonBotPolicy | quote}}
-{{- end }}
+    - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"
+    - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 {{- if .IAM.ExternalDNSPolicy }}
   - metadata:
-      name: external-dns-external-dns
+      name: external-dns
       namespace: jx
       labels: {aws-usage: "jenkins-x"}
     attachPolicyARNs:
@@ -26,20 +25,14 @@ iam:
 {{- end }}
 {{- if .IAM.CertManagerPolicy }}
   - metadata:
-      name: cert-manager-cert-manager
-      namespace: cert-manager
-      labels: {aws-usage: "jenkins-x"}
-    attachPolicyARNs:
-    - {{.IAM.CertManagerPolicy | quote}}
-  - metadata:
-      name: cert-manager-cainjector
+      name: cert-manager
       namespace: cert-manager
       labels: {aws-usage: "jenkins-x"}
     attachPolicyARNs:
     - {{.IAM.CertManagerPolicy | quote}}
 {{- end }}
   - metadata:
-      name: jenkins-x-controllerbuild
+      name: jxboot-helmfile-resources-controllerbuild
       namespace: jx
       labels: {aws-usage: "jenkins-x"}
     attachPolicyARNs:
@@ -50,4 +43,26 @@ iam:
       labels: {aws-usage: "jenkins-x"}
     attachPolicyARNs:
     - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
-
+  - metadata:
+      name: jxl-boot
+      namespace: jx
+      labels: {aws-usage: "jenkins-x"}
+    attachPolicyARNs:
+    - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+  - metadata:
+      name: cluster-autoscaler
+      namespace: cluster-autoscaler
+      labels: {aws-usage: "jenkins-x"}
+    attachPolicy:
+      Version: '2012-10-17'
+      Statement:
+      - Effect: Allow
+        Action:
+        - autoscaling:DescribeAutoScalingGroups
+        - autoscaling:DescribeAutoScalingInstances
+        - autoscaling:DescribeLaunchConfigurations
+        - autoscaling:DescribeTags
+        - autoscaling:SetDesiredCapacity
+        - autoscaling:TerminateInstanceInAutoScalingGroup
+        - ec2:DescribeLaunchTemplateVersions
+        Resource: "*"
