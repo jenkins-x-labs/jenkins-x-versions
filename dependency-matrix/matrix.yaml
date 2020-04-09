@@ -497,3 +497,9 @@ dependencies:
   url: https://github.com/jenkins-x-charts/nexus
   version: 0.1.25
   versionURL: ""
+- host: github.com
+  owner: jenkins-x-labs
+  repo: flagger-metrics
+  url: https://github.com/jenkins-x-labs/flagger-metrics
+  version: 0.0.8
+  versionURL: ""
