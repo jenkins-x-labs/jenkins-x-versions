@@ -503,3 +503,9 @@ dependencies:
   url: https://github.com/jenkins-x-labs/flagger-metrics
   version: 0.0.8
   versionURL: ""
+- host: github.com
+  owner: helm
+  repo: cluster-autoscaler
+  url: https://github.com/helm/charts/tree/master/stable/cluster-autoscaler
+  version: 7.2.2
+  versionURL: ""
