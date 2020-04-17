@@ -68,10 +68,3 @@ Dependency | Sources | Version | Mismatched versions
 [jenkins-x-labs/jxl](https://github.com/jenkins-x-labs/jxl) |  | [0.0.181](https://github.com/jenkins-x-labs/jxl/releases/tag/v0.0.181) | 
 [jenkins-x-labs/istio](https://github.com/jenkins-x-labs/istio) |  | [0.0.21]() | 
 [godaddy/kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) |  | [3.2.0]() | 
-[jenkins-x-charts/acme](https://github.com/jenkins-x-charts/acme) |  | [0.1.1]() | 
-[jenkins-x/charts](https://github.com/jenkins-x/charts) |  | [1.1.7]() | 
-[jenkins-x-charts/nexus](https://github.com/jenkins-x-charts/nexus) |  | [0.1.25]() | 
-[jenkins-x-labs/flagger-metrics](https://github.com/jenkins-x-labs/flagger-metrics) |  | [0.0.8]() | 
-[helm/cluster-autoscaler](https://github.com/helm/charts/tree/master/stable/cluster-autoscaler) |  | [7.2.2]() | 
-[Comcast/kuberhealthy](https://github.com/Comcast/kuberhealthy) |  | [1.2.6]() | 
-[helm/metrics-server](https://github.com/helm/charts/tree/master/stable/metrics-server) |  | [2.11.0]() | 
