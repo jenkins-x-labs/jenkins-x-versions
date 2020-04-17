@@ -69,3 +69,4 @@ Dependency | Sources | Version | Mismatched versions
 [jenkins-x-labs/istio](https://github.com/jenkins-x-labs/istio) |  | [0.0.21]() | 
 [godaddy/kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) |  | [3.2.0]() | 
 [jenkins-x-charts/acme](https://github.com/jenkins-x-charts/acme) |  | [0.1.1]() | 
+[jenkins-x/charts](https://github.com/jenkins-x/charts) |  | [1.1.7]() | 
