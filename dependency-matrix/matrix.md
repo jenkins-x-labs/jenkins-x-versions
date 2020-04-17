@@ -13,10 +13,10 @@ Dependency | Sources | Version | Mismatched versions
 [jenkins-x/jenkins-x-platform](https://github.com/jenkins-x/jenkins-x-platform) |  | [2.0.2149](https://github.com/jenkins-x/jenkins-x-platform/releases/tag/v2.0.2149) | 
 [jenkins-x-charts/jx-build-templates](https://github.com/jenkins-x-charts/jx-build-templates) |  | [0.0.1416]() | 
 [jenkins-x-charts/knative-build](https://github.com/jenkins-x-charts/knative-build) |  | [0.1.19]() | 
-[jenkins-x/lighthouse](https://github.com/jenkins-x/lighthouse) |  | [0.0.534]() | 
-[jenkins-x-charts/prow](https://github.com/jenkins-x-charts/prow) |  | [0.0.1739](https://github.com/jenkins-x-charts/prow/releases/tag/v0.0.1739) | 
-[jenkins-x/sso-operator](https://github.com/jenkins-x/sso-operator) |  | [1.2.44]() | 
-[jenkins-x-charts/tekton](https://github.com/jenkins-x-charts/tekton) |  | [0.0.52]() | 
+[jenkins-x/lighthouse](https://github.com/jenkins-x/lighthouse) |  | [0.0.535]() | 
+[jenkins-x-charts/prow](https://github.com/jenkins-x-charts/prow) |  | [0.0.1701](https://github.com/jenkins-x-charts/prow/releases/tag/v0.0.1701) | 
+[jenkins-x/sso-operator](https://github.com/jenkins-x/sso-operator) |  | [1.2.43]() | 
+[jenkins-x-charts/tekton](https://github.com/jenkins-x-charts/tekton) |  | [0.0.49]() | 
 [jenkins-x-charts/vault-operator](https://github.com/jenkins-x-charts/vault-operator) |  | [0.3.2]() | 
 [jetstack/cert-manager](https://github.com/jetstack/cert-manager) |  | [0.14.2](https://github.com/jetstack/cert-manager/releases/tag/v0.14.2) | 
 [helm/charts](https://github.com/helm/charts/tree/master/stable/nginx-ingress) |  | [1.17.1]() | 
