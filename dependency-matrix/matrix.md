@@ -62,9 +62,9 @@ Dependency | Sources | Version | Mismatched versions
 [bitnami/external-dns](https://github.com/bitnami/charts/tree/master/bitnami/external-dns) |  | [2.20.4]() | 
 [helm/nginx-ingress](https://github.com/helm/charts/tree/master/stable/nginx-ingress):nginx-ingress |  | [1.36.2]() | 
 [jenkins-x/jenkins-x-builders-base-image](https://github.com/jenkins-x/jenkins-x-builders-base-image) | [github.com/jenkins-x/jenkins-x-builders-ml](https://github.com/jenkins-x/jenkins-x-builders-ml.git) | [0.0.34]() | 
-[solo-io/gloo](https://github.com/solo-io/gloo) |  | [1.3.21](https://github.com/solo-io/gloo/releases/tag/v1.3.21) | 
-[jenkins-x-charts/jxboot-helmfile-resources](https://github.com/jenkins-x-charts/jxboot-helmfile-resources) |  | [0.0.143]() | 
-[kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns) |  | [2.20.15]() | 
+[solo-io/gloo](https://github.com/solo-io/gloo) |  | [1.3.14](https://github.com/solo-io/gloo/releases/tag/v1.3.14) | 
+[jenkins-x-charts/jxboot-helmfile-resources](https://github.com/jenkins-x-charts/jxboot-helmfile-resources) |  | [0.0.100]() | 
+[kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns) |  | [2.21.0]() | 
 [jenkins-x-labs/jxl](https://github.com/jenkins-x-labs/jxl) |  | [0.0.181](https://github.com/jenkins-x-labs/jxl/releases/tag/v0.0.181) | 
 [jenkins-x-labs/istio](https://github.com/jenkins-x-labs/istio) |  | [0.0.21]() | 
 [godaddy/kubernetes-external-secrets](https://github.com/godaddy/kubernetes-external-secrets) |  | [3.2.0]() | 
