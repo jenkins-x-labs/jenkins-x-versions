@@ -479,3 +479,9 @@ dependencies:
   url: https://github.com/godaddy/kubernetes-external-secrets
   version: 3.2.0
   versionURL: ""
+- host: github.com
+  owner: jenkins-x-charts
+  repo: acme
+  url: https://github.com/jenkins-x-charts/acme
+  version: 0.1.1
+  versionURL: ""
